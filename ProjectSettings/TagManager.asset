@@ -10,8 +10,12 @@ TagManager:
   - First_Lever
   - Activate_Lever
   - Cage_Key
-  - Arrow
   - Target
+  - ItemPickup
+  - Health
+  - Ammo
+  - HealthUpgrade
+  - Bolt
   layers:
   - Default
   - TransparentFX

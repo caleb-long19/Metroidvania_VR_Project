@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OpenLeverDoor
+    m_ConditionEvent: LeverActivated
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5195390795577403439}
@@ -60,7 +60,7 @@ AnimatorController:
   m_Name: Lever_Locked_Door (1)
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: OpenLeverDoor
+  - m_Name: LeverActivated
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
