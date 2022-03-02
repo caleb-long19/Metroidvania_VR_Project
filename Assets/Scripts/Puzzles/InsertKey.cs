@@ -14,7 +14,7 @@ public class InsertKey : MonoBehaviour
         missingKey.SetActive(false);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionStay(Collision collision)
     {
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == "Ark_Key")

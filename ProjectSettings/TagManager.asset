@@ -4,18 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Lost_Lever
+  - Activate_Lever
   - Door_Lock
   - Ark_Key
-  - Lost_Lever
   - First_Lever
-  - Activate_Lever
-  - Cage_Key
-  - Target
   - ItemPickup
-  - Health
-  - Ammo
-  - HealthUpgrade
-  - Bolt
+  - Target
+  - Cage_Key
+  - Health_Bottle
   layers:
   - Default
   - TransparentFX

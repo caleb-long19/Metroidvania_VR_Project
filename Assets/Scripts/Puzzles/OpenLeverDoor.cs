@@ -16,7 +16,6 @@ public class OpenLeverDoor : MonoBehaviour
         {
             leverXposition = leverObject.transform.localRotation.eulerAngles.x;
             leverXposition = (leverXposition > 180) ? leverXposition - 360 : leverXposition;
-            Debug.Log("Current Lever Position: " + leverXposition);
 
             if (leverXposition >= 35)
             {
