@@ -7,19 +7,9 @@ using TMPro;
 public class PlayerAmmo : MonoBehaviour
 {
     public TextMeshProUGUI ammoText;
-    public int startingAmmo = 10;
-    public int maxAmmo = 50;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetPlayerAmmo(int startingAmmo, int maxAmmo)
     {
-        ammoText.text = startingAmmo.ToString();
-    }
-    void Update()
-    {
-        if (startingAmmo > maxAmmo)
-        {
-            startingAmmo = maxAmmo;
-        }
+        ammoText.text = startingAmmo.ToString() + "/" + maxAmmo;
     }
 }

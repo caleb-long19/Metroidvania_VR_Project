@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerHealthController : MonoBehaviour
     public int curPlayerHealth;
 
     public PlayerHealth playerHealth;
+
+    public AudioSource HealthFullSFX;
+    public AudioSource HealthAcquiredSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -23,30 +27,11 @@ public class PlayerHealthController : MonoBehaviour
         {
             curPlayerHealth = maxPlayerHealth;
         }
-    }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if(collision.gameObject.tag == "Health_Bottle")
+        if (curPlayerHealth <= 0)
         {
-            if (curPlayerHealth == maxPlayerHealth)
-            {
-                Debug.Log("Health is FULL");
-            }
-            else
-            {
-                Debug.Log("Player has been healed");
-                Destroy(collision.gameObject);
-                curPlayerHealth += 2;
-                playerHealth.SetPlayerHealth(curPlayerHealth);
-            }
-        }
-
-        if (collision.gameObject.tag == "Health_Upgrade")
-        {
-            maxPlayerHealth += maxPlayerHealth + 2;
+            SceneManager.LoadScene("HallowedScene");
             curPlayerHealth = maxPlayerHealth;
-            playerHealth.SetPlayerHealth(curPlayerHealth);
         }
     }
 
@@ -54,11 +39,12 @@ public class PlayerHealthController : MonoBehaviour
     {
         curPlayerHealth -= damage;
         playerHealth.SetPlayerHealth(curPlayerHealth);
+        Debug.Log("Player has taken damage");
     }
 
     public void TakeEnemyDamage(int damage) // (Linked to HurtTrigger Script)
     {
-        curPlayerHealth -= damage; // If Shield is less than or equal to 1, Player can lose Health
+        curPlayerHealth -= damage; // take away damage int from current player health
 
         //if the health is less than 0 - reset to 0
         if (curPlayerHealth <= 0)
@@ -67,4 +53,42 @@ public class PlayerHealthController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+
+        if (collision.tag == "Health_Bottle")
+        {
+            if (curPlayerHealth == maxPlayerHealth)
+            {
+                Debug.Log("Health is FULL");
+                HealthFullSFX.Play();
+            }
+            else
+            {
+                Debug.Log("Player has been healed");
+                curPlayerHealth += 2;
+                HealthAcquiredSFX.Play();
+                playerHealth.SetPlayerHealth(curPlayerHealth);
+                Destroy(collision.gameObject);
+            }
+        }
+
+        if (collision.tag == "Health_Upgrade")
+        {
+            Debug.Log("Item has collided");
+            HealthAcquiredSFX.Play();
+
+            maxPlayerHealth = maxPlayerHealth + 2;
+            curPlayerHealth = maxPlayerHealth;
+            playerHealth.SetMaxPlayerHealth(maxPlayerHealth);
+            playerHealth.SetPlayerHealth(curPlayerHealth);
+            Destroy(collision.gameObject);
+        }
+    }
+
+    public void UpdateHealth()
+    {
+        playerHealth.SetMaxPlayerHealth(curPlayerHealth);
+        playerHealth.SetPlayerHealth(maxPlayerHealth);
+    }
 }

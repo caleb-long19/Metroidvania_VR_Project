@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class ObradiusNPC : MonoBehaviour
 {
@@ -10,19 +12,17 @@ public class ObradiusNPC : MonoBehaviour
     //Obradius Text Boxes
     public GameObject HideText;
     public GameObject DialogIntroduction;
-    public GameObject DialogIntroduction_Part2;
     public GameObject DialogSuperStrength;
     public GameObject DialogGrappleHook;
-
 
     //Puzzle Items
     public GameObject SuperStrength;
     public GameObject GrappleHook;
 
-
     //Obradius SFX
     public AudioSource ObradiusSFX;
 
+    public SteamVR_Action_Boolean talkNPC;
 
     void Start()
     {
@@ -31,7 +31,6 @@ public class ObradiusNPC : MonoBehaviour
 
         //Organise what dialog boxes will be active
         DialogIntroduction.SetActive(true);
-        DialogIntroduction_Part2.SetActive(false);
         DialogSuperStrength.SetActive(false);
         DialogGrappleHook.SetActive(false);
         #endregion
@@ -41,6 +40,7 @@ public class ObradiusNPC : MonoBehaviour
     void Update()
     {
         ObradiusDialogueSelection();
+
     }
 
 
@@ -49,7 +49,6 @@ public class ObradiusNPC : MonoBehaviour
         if (SuperStrength.activeInHierarchy == false) // If Player picks up the Strength Object, continue dialogue
         {
             DialogIntroduction.SetActive(false);
-            DialogIntroduction_Part2.SetActive(false);
             DialogSuperStrength.SetActive(true);
         }
         if (GrappleHook.activeInHierarchy == false) //If the player has colected the Grapple Hook, continue dialogue
@@ -63,13 +62,19 @@ public class ObradiusNPC : MonoBehaviour
     public void OnTriggerStay(Collider collision)
     {
         #region Triggers for NPC Dialog Boxes
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && talkNPC.stateDown)
         {
+            ObradiusSFX.Play();
             HideText.SetActive(false);
             Debug.Log("Collided with Npc");
             DialogBoxObradius.SetActive(true); // Display NPC Dialog Box when Player Collides with NPC
-            ObradiusSFX.Play(0); // Play NPC SFX
         }
         #endregion
+    }
+
+    public void OnTriggerExit(Collider collision)
+    {
+        HideText.SetActive(true);
+        DialogBoxObradius.SetActive(false);
     }
 }

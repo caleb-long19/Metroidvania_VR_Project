@@ -2,24 +2,37 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class SuperStrength : MonoBehaviour
 {
     public GameObject superStrength;
+    public Collider stopTeleport;
 
-    public Type XRGrabInteractable { get; private set; }
+    public Type Interactable { get; private set; }
+
+    public Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.WakeUp();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (superStrength.activeInHierarchy == false)
         {
-            this.GetComponent<XRGrabInteractable>().enabled = true;
+            this.GetComponent<Interactable>().enabled = true;
+            rb.isKinematic = false;
+            stopTeleport.enabled = false;
         }
         else
         {
-            this.GetComponent<XRGrabInteractable>().enabled = false;
+            this.GetComponent<Interactable>().enabled = false;
+            rb.isKinematic = true;
         }
     }
 }

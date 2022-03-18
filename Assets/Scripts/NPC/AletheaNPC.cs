@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class AletheaNPC : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class AletheaNPC : MonoBehaviour
     public GameObject HideText;
     public GameObject DialogIntroduction;
 
+    public SteamVR_Action_Boolean talkNPC;
 
     void Start()
     {
@@ -25,15 +28,19 @@ public class AletheaNPC : MonoBehaviour
     public void OnTriggerStay(Collider collision)
     {
         #region Triggers for NPC Dialog Boxes
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && talkNPC.stateDown)
         {
             HideText.SetActive(false);
             Debug.Log("Collided with Npc");
             DialogBoxAlethea.SetActive(true); // Display NPC Dialog Box when Player Collides with NPC
         }
-
-        HideText.SetActive(true);
         #endregion
+    }
+
+    public void OnTriggerExit(Collider collision)
+    {
+        HideText.SetActive(true);
+        DialogBoxAlethea.SetActive(false);
     }
 }
 

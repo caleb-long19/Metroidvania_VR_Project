@@ -15,6 +15,10 @@ TagManager:
   - Health_Bottle
   - Ammo
   - Bolt
+  - Enemy
+  - Health_Upgrade
+  - Weapon
+  - Ability
   layers:
   - Default
   - TransparentFX
@@ -26,11 +30,11 @@ TagManager:
   - 
   - WhatIsGround
   - WhatIsWall
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Weapon
+  - GrappleLocation
+  - Item
+  - Torch
   - 
   - 
   - 

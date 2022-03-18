@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DestroyTarget : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    public AudioSource audioSource;
+    public AudioClip targetSFX;
+
+    void TargetTakesDamage()
     {
-        if (collision.gameObject.tag == "Bolt")
-        {
-            Destroy(gameObject);
-        }
+        Destroy(this.gameObject);
     }
 }

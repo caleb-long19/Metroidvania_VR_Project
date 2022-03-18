@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class AngelinaNPC : MonoBehaviour
 {
@@ -10,14 +12,17 @@ public class AngelinaNPC : MonoBehaviour
     public GameObject DialogBoxAngelina; // GameObject for Angelina NPC Dialog Box
 
     //Angelina Text Boxes
+    public GameObject HideText;
     public GameObject DialogIntroduction;
     public GameObject DialogWarning;
 
     //Bools
-    public bool angelinaIntroduced = false;
+    private bool angelinaIntroduced = false;
 
     //Angelina SFX
     public AudioSource angelinaSFX;
+
+    public SteamVR_Action_Boolean talkNPC;
 
 
     void Start()
@@ -51,15 +56,22 @@ public class AngelinaNPC : MonoBehaviour
     public void OnTriggerStay(Collider collision)
     {
         #region Triggers for NPC Dialog Boxes
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && talkNPC.stateDown)
         {
+            angelinaSFX.Play();
             Debug.Log("Collided with Npc");
+            HideText.SetActive(false);
             DialogBoxAngelina.SetActive(true); // Display NPC Dialog Box when Player Collides with NPC
-            angelinaSFX.Play(0); // Play NPC SFX
         }
 
-        angelinaIntroduced = true;
         #endregion
+    }
+
+    public void OnTriggerExit(Collider collision)
+    {
+        HideText.SetActive(true);
+        DialogBoxAngelina.SetActive(false);
+        angelinaIntroduced = true;
     }
 }
 
