@@ -19,6 +19,7 @@ TagManager:
   - Health_Upgrade
   - Weapon
   - Ability
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -35,9 +36,9 @@ TagManager:
   - GrappleLocation
   - Item
   - Torch
-  - 
-  - 
-  - 
+  - Floor
+  - Enemy
+  - Hands
   - 
   - 
   - 

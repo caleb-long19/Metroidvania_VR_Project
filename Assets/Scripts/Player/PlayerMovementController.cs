@@ -7,13 +7,8 @@ using Valve.VR.InteractionSystem;
 public class PlayerMovementController : MonoBehaviour
 {
     public SteamVR_Action_Vector2 input;
-    public float speed = 1;
-    private CharacterController characterController;
-
-    private void Start()
-    {
-        characterController = GetComponent<CharacterController>();
-    }
+    public float speed = 1.0f;
+    public CharacterController characterController;
 
     // Update is called once per frame
     void Update()

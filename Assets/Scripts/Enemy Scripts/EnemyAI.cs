@@ -110,6 +110,8 @@ public class EnemyAI : MonoBehaviour
         else
         {
             EnemyAnimator.SetBool("AttackingPlayer", false); //Activate the moving animation for the Enemy
+            AttackingSFX.Play();
+            WalkingSFX.Stop();
             this.GetComponent<NavMeshAgent>().enabled = true;
         }
     }

@@ -45,12 +45,6 @@ public class PlayerHealthController : MonoBehaviour
     public void TakeEnemyDamage(int damage) // (Linked to HurtTrigger Script)
     {
         curPlayerHealth -= damage; // take away damage int from current player health
-
-        //if the health is less than 0 - reset to 0
-        if (curPlayerHealth <= 0)
-        {
-            curPlayerHealth = 0;
-        }
     }
 
     private void OnTriggerEnter(Collider collision)

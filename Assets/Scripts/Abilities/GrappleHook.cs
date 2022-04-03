@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
+using Valve.VR.InteractionSystem.Sample;
 
 public class GrappleHook : MonoBehaviour
 {
@@ -17,14 +18,19 @@ public class GrappleHook : MonoBehaviour
     private Interactable interactable;
     private bool nowFiring = false;
 
+    public AudioSource grappleSFX;
+
+    public float springValue = 8f;
+    public float damperValue = 8f;
+
+    public CharacterController characterController;
+    public Collider playerCollider;
+    public Rigidbody playerPhysics;
+    public GroundedCheck groundedCheck;
+
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         interactable = GetComponent<Interactable>();
     }
 
@@ -38,13 +44,26 @@ public class GrappleHook : MonoBehaviour
             if (fireGrappleHook[source].stateDown)
             {
                 StartGrapple();
+
+                characterController.enabled = false;
+                playerPhysics.isKinematic = false;
+                playerCollider.enabled = true;
+
+
+                grappleSFX.Play();
                 Debug.Log("Grapple is being fired!");
             }
             else if (fireGrappleHook[source].stateUp)
             {
-                StopGrapple();
+                StopGrapple();  
+                grappleSFX.Stop();
+
+                playerPhysics.isKinematic = false;
+                playerCollider.enabled = true;
             }
         }
+
+        Debug.Log("GROUNDED VALUE IS: " + groundedCheck.isGroundedCheck);
     }
 
     void LateUpdate()
@@ -55,6 +74,7 @@ public class GrappleHook : MonoBehaviour
     void StartGrapple()
     {
         RaycastHit hit;
+
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrappleLocation))
         {
             grapplePoint = hit.point;
@@ -64,12 +84,11 @@ public class GrappleHook : MonoBehaviour
 
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
-            joint.maxDistance = distanceFromPoint * 0.2f;
+            joint.maxDistance = distanceFromPoint * 0.6f;
             joint.minDistance = distanceFromPoint * 0.1f;
 
-            joint.spring = 12f;
-            joint.damper = 8f;
-            joint.massScale = 4f;
+            joint.spring = springValue;
+            joint.damper = damperValue;
 
             lr.positionCount = 2;
         }

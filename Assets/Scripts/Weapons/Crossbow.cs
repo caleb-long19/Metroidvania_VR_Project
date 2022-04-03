@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
+using Valve.VR.InteractionSystem.Sample;
 
 public class Crossbow : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Crossbow : MonoBehaviour
 
     public SteamVR_Action_Boolean fireCrossbow;
     private Interactable interactable;
+    private LockToPoint lockToPoint;
 
     public PlayerAmmoController playerAmmoCtrl;
     public int crntAmmo;
@@ -30,12 +32,14 @@ public class Crossbow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        interactable = GetComponent<Interactable>();
+        lockToPoint = GetComponent<LockToPoint>();
+        lockToPoint.enabled = false;
+
         if (boltLocation == null)
         {
             boltLocation = transform;
         }
-
-        interactable = GetComponent<Interactable>();
     }
 
     // Update is called once per frame
@@ -58,6 +62,7 @@ public class Crossbow : MonoBehaviour
             }
 
             shootCrossbow();
+            lockToPoint.enabled = true;
         }
     }
 
