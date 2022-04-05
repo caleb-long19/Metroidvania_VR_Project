@@ -1,7 +1,6 @@
-# The Hallowed VR
-* Developed by Caleb Long
+<kbd>![The Hallowed VR - Banner](Screenshots/Hallowed_Banner_GitHub.png?)</kbd>
 
-## Description of The Hallowed VR
+## Description Of The Hallowed VR
 The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality. You have awoken inside The Hallowed, a location only rumoured to exist. You must explore this mysterious place and find your escape. On your journey you will discover abilities to help traverse the map, such as a grapple hook to get to those hard to reach places. You are not alone in The Hallowed, strange creatures have inhabited the place and wish to remove you from it. Use ranged weaponry to gain an advantage and take them out. Solve puzzles to discover hidden rooms and items. Find the secrets of The Hallowed and escape...
 
 ### Original Features
@@ -151,6 +150,21 @@ Simply download the ZIP Folder and extract it to a location of your choosing, en
 
 ### Screenshots
 
+#### The Hallowed VR - Waiting
+<kbd>![Waiting](Screenshots/The%20Hallowed%20VR%20-%20Waiting.png?)</kbd>
+
+#### The Hallowed VR - The Spawn
+<kbd>![The Spawn](Screenshots/The%20Hallowed%20VR%20-%20The%20Spawn.png?)</kbd>
+
+#### The Hallowed VR - The Pantheon
+<kbd>![The Pantheon](Screenshots/The%20Hallowed%20VR%20-%20The%20Pantheon.png?)</kbd>
+
+#### The Hallowed VR - The Hallway
+<kbd>![The Hallway](Screenshots/The%20Hallowed%20VR%20-%20The%20Hallway.png?)</kbd>
+
+#### The Hallowed VR - The Crossbow
+<kbd>![The Crossbow](Screenshots/The%20Hallowed%20VR%20-%20The%20Crossbow.png?)</kbd>
+
 ### Project Links
 * [The Hallowed VR - Trello Dashboard](https://trello.com/invite/b/nVSZLB24/4b36d8a3d04c71445741f6ed38fb5635/hallowed-dungeon-vr)
 * [The Hallowed VR - Gantt Chart](https://app.instagantt.com/shared/s/1201855759213542/latest)
@@ -196,9 +210,11 @@ Simply download the ZIP Folder and extract it to a location of your choosing, en
 * SteamVR - https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
 * Universal/Lightweight Render Pipeline -  https://unity.com/srp/universal-render-pipeline
 
-#### Sound Effects - Free To Use
+#### Sound Effects & Music - Free To Use
  * Enemy Walking Sound Effects - https://www.youtube.com/watch?v=RAcIeDLUSlE
  * Torch Burning Sound Effects - https://www.youtube.com/watch?v=AlCUdSTxe9k
  * Horror Ambience - https://www.youtube.com/watch?v=1nD3Sp_saz4
- * Bow Reloading - https://www.youtube.com/watch?v=kiKOo6HQFRw
+ * Bow Reloading Sound Effect - https://www.youtube.com/watch?v=kiKOo6HQFRw
+ * Grapple Sound Effect - https://www.storyblocks.com/audio/stock/grapple-gun-shoot-impact-reever62uwrk0wxxjxr.html
+ * Crossbow Firing Sound Effect - https://www.videvo.net/sound-effect/archery-medieval-crossbow-29/397899/
 
