@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Lost_Lever
+  - Activate_Lever
+  - Door_Lock
+  - Ark_Key
+  - First_Lever
+  - ItemPickup
+  - Target
+  - Cage_Key
+  - Health_Bottle
+  - Ammo
+  - Bolt
+  - Enemy
+  - Health_Upgrade
+  - Weapon
+  - Ability
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -13,16 +29,16 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - WhatIsGround
+  - WhatIsWall
+  - Player
+  - Weapon
+  - GrappleLocation
+  - Item
+  - Torch
+  - Floor
+  - Enemy
+  - Hands
   - 
   - 
   - 
