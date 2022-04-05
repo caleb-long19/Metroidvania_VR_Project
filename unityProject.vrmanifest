@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.thehallowedvr.exe",
+      "app_key": "application.generated.unity.thehallowedvrtestproject.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "G:\\GitHub_Repos\\The-Hallowed_VR_Project\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "G:\\GitHub Repositories\\The-Hallowed_VR_Project\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "The Hallowed VR [Testing]"
+          "name": "The Hallowed VR - Test Project [Testing]"
         }
       }
     }
