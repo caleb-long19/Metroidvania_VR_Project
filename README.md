@@ -218,3 +218,4 @@ Simply download the ZIP Folder and extract it to a location of your choosing, en
  * Grapple Sound Effect - https://www.storyblocks.com/audio/stock/grapple-gun-shoot-impact-reever62uwrk0wxxjxr.html
  * Crossbow Firing Sound Effect - https://www.videvo.net/sound-effect/archery-medieval-crossbow-29/397899/
 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
