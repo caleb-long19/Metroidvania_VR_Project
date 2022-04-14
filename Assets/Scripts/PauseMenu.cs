@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject settingsMenu;
+    public GameObject controlsMenu;
 
     public GameObject deactivateLine;
 
@@ -33,7 +34,14 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                GamePaused();
+                if (Time.timeScale == 0f)
+                {
+                    Debug.Log("Game is paused");
+                }
+                else
+                {
+                    GamePaused();
+                }
             }
         }
     }
@@ -58,6 +66,18 @@ public class PauseMenu : MonoBehaviour
         settingsMenu.SetActive(false);
     }
 
+    public void ControlsMenu()
+    {
+        pauseMenu.SetActive(false);
+        controlsMenu.SetActive(true);
+    }
+
+    public void controlsReturn()
+    {
+        pauseMenu.SetActive(true);
+        controlsMenu.SetActive(false);
+    }
+
     public void ExitToMenu()
     {
         SceneManager.LoadScene("HVRMainMenu");
@@ -69,6 +89,5 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         deactivateLine.SetActive(true);
         Time.timeScale = 0f;
-        
     }
 }

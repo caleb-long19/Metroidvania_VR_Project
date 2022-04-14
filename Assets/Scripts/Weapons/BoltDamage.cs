@@ -6,17 +6,19 @@ public class BoltDamage : MonoBehaviour
 {
     public Rigidbody rigidbody;
     public GameObject bloodParticles;
-    public int damage = 2;
     private float depth = 0.30f;
 
-    private void Start()
+    private PlayerAmmoController playerAmmoController;
+
+    private void Awake()
     {
         rigidbody.GetComponent<Rigidbody>();
+        playerAmmoController = GameObject.Find("Player").GetComponent<PlayerAmmoController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        collision.gameObject.SendMessageUpwards("EnemyTakesDamage", damage, SendMessageOptions.DontRequireReceiver);
+        collision.gameObject.SendMessageUpwards("EnemyTakesDamage", playerAmmoController.boltDamage, SendMessageOptions.DontRequireReceiver);
         collision.gameObject.SendMessageUpwards("TargetTakesDamage", SendMessageOptions.DontRequireReceiver);
 
         if (collision.gameObject.tag == "Enemy")
