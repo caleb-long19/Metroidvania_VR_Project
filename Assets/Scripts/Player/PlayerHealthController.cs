@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class PlayerHealthController : MonoBehaviour
     public int curPlayerHealth;
 
     public PlayerHealth playerHealth;
+    public TextMeshProUGUI healthNum;
 
     public AudioSource HealthFullSFX;
     public AudioSource HealthAcquiredSFX;
@@ -30,21 +32,19 @@ public class PlayerHealthController : MonoBehaviour
 
         if (curPlayerHealth <= 0)
         {
-            SceneManager.LoadScene("HallowedScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             curPlayerHealth = maxPlayerHealth;
         }
-    }
 
-    void TakeDamage(int damage)
-    {
-        curPlayerHealth -= damage;
-        playerHealth.SetPlayerHealth(curPlayerHealth);
-        Debug.Log("Player has taken damage");
+        healthNum.text = curPlayerHealth.ToString() + "/" + maxPlayerHealth;
+
     }
 
     public void TakeEnemyDamage(int damage) // (Linked to HurtTrigger Script)
     {
         curPlayerHealth -= damage; // take away damage int from current player health
+        playerHealth.SetPlayerHealth(curPlayerHealth);
+        Debug.Log("Player has taken damage");
     }
 
     private void OnTriggerEnter(Collider collision)

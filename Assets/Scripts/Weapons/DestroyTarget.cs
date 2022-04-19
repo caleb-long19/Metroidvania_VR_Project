@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DestroyTarget : MonoBehaviour
 {
-    public AudioSource audioSource;
     public AudioClip targetSFX;
 
     void TargetTakesDamage()
     {
+        AudioSource.PlayClipAtPoint(targetSFX, this.gameObject.transform.position);
         Destroy(this.gameObject);
     }
 }

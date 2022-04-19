@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAmmoController : MonoBehaviour
 {
     public int maxAmmo = 50;
+    public int boltDamage = 2;
     public int currentAmmo;
 
     public PlayerAmmo playerAmmo;
@@ -48,12 +49,30 @@ public class PlayerAmmoController : MonoBehaviour
         if (collision.tag == "Ammo_Upgrade")
         {
             Debug.Log("Ammo Upgrade has collided");
-            maxAmmo = maxAmmo + 10;
             AmmoAcquiredSFX.Play();
-            currentAmmo += currentAmmo + 10;
+
+            maxAmmo += 10;
+            currentAmmo += 10;
             playerAmmo.SetPlayerAmmo(currentAmmo, maxAmmo);
+
             Destroy(collision.gameObject);
         }
+
+        if (collision.tag == "Damage_Upgrade")
+        {
+            Debug.Log("Damage Upgrade has collided");
+            AmmoAcquiredSFX.Play();
+
+            boltDamage += 2;
+
+            playerAmmo.SetPlayerAmmo(currentAmmo, maxAmmo);
+
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(BoltDamage collision)
+    {
     }
 
     public void UpdateAmmo()

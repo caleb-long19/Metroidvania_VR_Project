@@ -63,7 +63,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
         
-        if (Health == 0)
+        if (Health <= 0)
         {
             Destroy(this.gameObject);
             Debug.Log("Enemy has been killed!");
