@@ -41,7 +41,6 @@ public class EnemyAI : MonoBehaviour
             if (!WalkingSFX.isPlaying)
             {
                 IdleSFX.Stop();
-                AttackingSFX.Stop();
                 WalkingSFX.Play();
             }
 
@@ -58,7 +57,6 @@ public class EnemyAI : MonoBehaviour
             {
                 IdleSFX.Play();
                 WalkingSFX.Stop();
-                AttackingSFX.Stop();
                 EnemyHurtSFX.Stop();
             }
         }
@@ -96,22 +94,13 @@ public class EnemyAI : MonoBehaviour
             //Play SFX and Activate Enemies Attack Animation
             this.GetComponent<NavMeshAgent>().enabled = false;
             EnemyAnimator.SetBool("AttackingPlayer", true); //Activate the moving animation for the Enemy
-
-            if (!AttackingSFX.isPlaying)
-            {
-                IdleSFX.Stop();
-                WalkingSFX.Stop();
-                EnemyHurtSFX.Stop();
-                AttackingSFX.Play();
-            }
+            AttackingSFX.Play();
 
             Debug.Log("Player Has Collided!"); // Display Debug Log in Console
         }
         else
         {
             EnemyAnimator.SetBool("AttackingPlayer", false); //Activate the moving animation for the Enemy
-            AttackingSFX.Play();
-            WalkingSFX.Stop();
             this.GetComponent<NavMeshAgent>().enabled = true;
         }
     }
