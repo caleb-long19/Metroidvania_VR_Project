@@ -51,7 +51,7 @@ The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality
   * Store Crossbow & Grapple Hook
 * Soundtrack
 
-### Updated Features - Includes User Requested Features
+### Updated Features - MVP
 * Low-Poly Art Style
 * Metroidvania Open Level Design
 * Ranged Combat
@@ -66,7 +66,7 @@ The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality
     * God of Range - Extended Line of Sight
     * God of Precision - Tall, Slow, Large Damage Radius
   * Distance Based Detection
-  * Nasmesh Pathfinding
+  * Navmesh Pathfinding
   * Multiple Animation States
     * Idle
     * Walking
@@ -83,11 +83,11 @@ The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality
     * Restore Players Ammo
 * Upgrade System
   * Health Upgrade
-    * Permanantely Increase Player Health
+    * Permanently Increase Player Health
   * Damage/Strength Upgrade
-    * Permanantely Increase Player Damage 
+    * Permanently Increase Player Damage 
   * Ammo Upgrade
-    * Permanantely Increase Player Ammo Storage
+    * Permanently Increase Player Ammo Storage
 * Puzzles
   * The Locked Cage
   * The Missing Lever
@@ -97,19 +97,21 @@ The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality
   * The Enemy Guards
 * Inventory/Holster System
   * Store Crossbow & Grapple Hook
-* Soundtrack
-* Interactive Main Menu
+
+### Updated Features - Includes User Requested Features - MAP
+* Soundtrack - Not Implemented
+* Boss Fight
+* Interactive Main Menu - User Requested Feature
   * Start Game
   * Tutorial
   * Settings
   * Controls
   * Exit Game
-* Pause Menu
+* Pause Menu - User Requested Feature
   * Resume Game
   * Change Settings
   * View Controls
   * Exit Game
-
 
 ### How To Install
 If you wish to download/install The Hallowed VR, you can either visit the release page on this repository and download the latest zip file, or visit The Hallowed VR Itch.io Page.
@@ -217,5 +219,6 @@ Simply download the ZIP Folder and extract it to a location of your choosing, en
  * Bow Reloading Sound Effect - https://www.youtube.com/watch?v=kiKOo6HQFRw
  * Grapple Sound Effect - https://www.storyblocks.com/audio/stock/grapple-gun-shoot-impact-reever62uwrk0wxxjxr.html
  * Crossbow Firing Sound Effect - https://www.videvo.net/sound-effect/archery-medieval-crossbow-29/397899/
+ * Door Opening Sound Effect - https://www.youtube.com/watch?v=6LUCJMScgaE
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
