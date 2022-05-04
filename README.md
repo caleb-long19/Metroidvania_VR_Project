@@ -87,9 +87,6 @@ Once downloaded, you can unzip the folder
 <kbd>![Step3](Screenshots/Install_Part3.png?)</kbd>
 Open it and locate ‘The Hallowed VR.exe’. Double Click and the game will run.
 
-#### Walkthrough
-The Hallowed VR supports a tutorial level. When you launch the game, you will be placed inside the main menu room, 3 spinning orbs will be present, one of them has the words “Tutorial”. By walking towards this orb and grabbing it, you will be transported to the tutorial level, providing information on the main mechanics of the game.
-
 ------------
 
 ### How To Play/Controls
@@ -125,6 +122,9 @@ For a more in-depth look at the control scheme, access the pause menu by pressin
 
 #### Controls
 <kbd>![Controls](Screenshots/Controls.png?)</kbd>
+
+#### Walkthrough
+The Hallowed VR supports a tutorial level. When you launch the game, you will be placed inside the main menu room, 3 spinning orbs will be present, one of them has the words “Tutorial”. By walking towards this orb and grabbing it, you will be transported to the tutorial level, providing information on the main mechanics of the game.
 
 ------------
 
