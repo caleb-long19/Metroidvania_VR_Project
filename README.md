@@ -3,55 +3,7 @@
 ## Description Of The Hallowed VR
 The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality. You have awoken inside The Hallowed, a location only rumoured to exist. You must explore this mysterious place and find your escape. On your journey you will discover abilities to help traverse the map, such as a grapple hook to get to those hard to reach places. You are not alone in The Hallowed, strange creatures have inhabited the place and wish to remove you from it. Use ranged weaponry to gain an advantage and take them out. Solve puzzles to discover hidden rooms and items. Find the secrets of The Hallowed and escape...
 
-### Original Features
-* Low-Poly Art Style
-* Metroidvania Open Level Design
-* Ranged Combat
-  * Crossbow
-* NPCs (Friendly AI)
-  * Idle Animations 
-  * Dynamic Dialogue System
-  * User Interaction
-* Enemy AI
-  * 3 Enemy Variants
-    * God of Strength - Fast & Strong
-    * God of Range - Extended Line of Sight
-    * God of Precision - Tall, Slow, Large Damage Radius
-  * Distance Based Detection
-  * Nasmesh Pathfinding
-  * Multiple Animation States
-    * Idle
-    * Walking
-    * Attack
-* Player Abilties
-  * Super Strength
-    * Pickup Large Objects
-  * Grapple Hook
-    * Reach High Up Areas
-* Item Pickups
-  * Health Potion
-    * Restore Players Health
-  * Ammo
-    * Restore Players Ammo
-* Upgrade System
-  * Health Upgrade
-    * Permanantely Increase Player Health
-  * Damage/Strength Upgrade
-    * Permanantely Increase Player Damage 
-  * Ammo Upgrade
-    * Permanantely Increase Player Ammo Storage
-* Puzzles
-  * The Locked Cage
-  * The Missing Lever
-  * The Large Boulder
-  * The Ark Key Door
-  * The Targets
-  * The Enemy Guards
-* Inventory/Holster System
-  * Store Crossbow & Grapple Hook
-* Soundtrack
-
-### Updated Features - MVP
+### Features - MVP
 * Low-Poly Art Style
 * Metroidvania Open Level Design
 * Ranged Combat
@@ -98,8 +50,9 @@ The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality
 * Inventory/Holster System
   * Store Crossbow & Grapple Hook
 
-### Updated Features - Includes User Requested Features - MAP
+### Features - Includes User Requested Features - MAP
 * Soundtrack - Not Implemented
+* Manual Reloading - Not Implemented
 * Boss Fight
 * Interactive Main Menu - User Requested Feature
   * Start Game
@@ -113,13 +66,29 @@ The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality
   * View Controls
   * Exit Game
 
+------------
+
 ### How To Install
-If you wish to download/install The Hallowed VR, you can either visit the release page on this repository and download the latest zip file, or visit The Hallowed VR Itch.io Page.
+
+#### Requirements:
+* VR Headset - Valve Index
+* Operating System - Windows
+* Hardware: Use ‘SteamVR Performance Test’ or a similar tool to check if your pc is ready to run VR. If it does, you can run this game with no issues!
+
+The Hallowed VR can be found on the gaming marketplace, Itch.io. the links below will take you to the official page. By scrolling down the page, the user will be presented with a ‘Download’ section, click the download button and wait for the .zip folder to be downloaded. The Hallowed VR can also be downloaded from the releases page on the github repository here:
 
 * Release Page: https://github.com/caleb-long19/The-Hallowed_VR_Project/releases
 * Itch.io Page: https://hallowinc.itch.io/the-hallowed-vr
 
-Simply download the ZIP Folder and extract it to a location of your choosing, enter the folder and open The Hallowed VR - Test Project.exe. Read the documentation in the "OPEN THIS FIRST" folder, for more information.
+<kbd>![Task1](Screenshots/Install_Part1.png?)</kbd>
+<kbd>![Task2](Screenshots/Install_Part2.png?)</kbd>
+Once downloaded, you can unzip the folder
+
+<kbd>![Step3](Screenshots/Install_Part3.png?)</kbd>
+Open it and locate ‘The Hallowed VR.exe’. Double Click and the game will run.
+
+#### Walkthrough
+The Hallowed VR supports a tutorial level. When you launch the game, you will be placed inside the main menu room, 3 spinning orbs will be present, one of them has the words “Tutorial”. By walking towards this orb and grabbing it, you will be transported to the tutorial level, providing information on the main mechanics of the game.
 
 ### How To Play/Controls
 
@@ -150,6 +119,20 @@ Simply download the ZIP Folder and extract it to a location of your choosing, en
 #### Exit Game
 * Press Escape on your keyboard or close via the SteamVR Menu
 
+For a more in-depth look at the control scheme, access the pause menu by pressing ‘B’ on the right-hand controller. Select the Controls button with the trigger and view the controls on that screen!
+
+#### Controls
+<kbd>![Controls](Screenshots/Controls.png?)</kbd>
+
+------------
+
+### Trailers
+
+#### The Hallowed VR - Release Trailer
+[![The Hallowed VR - Trailer](https://img.youtube.com/vi/cmpmiWZeoOs/0.jpg)](https://www.youtube.com/watch?v=cmpmiWZeoOs)
+
+------------
+
 ### Screenshots
 
 #### The Hallowed VR - Waiting
@@ -166,6 +149,8 @@ Simply download the ZIP Folder and extract it to a location of your choosing, en
 
 #### The Hallowed VR - The Crossbow
 <kbd>![The Crossbow](Screenshots/The%20Hallowed%20VR%20-%20The%20Crossbow.png?)</kbd>
+
+------------
 
 ### Project Links
 * [The Hallowed VR - Trello Dashboard](https://trello.com/invite/b/nVSZLB24/4b36d8a3d04c71445741f6ed38fb5635/hallowed-dungeon-vr)
