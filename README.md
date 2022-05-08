@@ -214,4 +214,16 @@ The Hallowed VR supports a tutorial level. When you launch the game, you will be
  * Crossbow Firing Sound Effect - https://www.videvo.net/sound-effect/archery-medieval-crossbow-29/397899/
  * Door Opening Sound Effect - https://www.youtube.com/watch?v=6LUCJMScgaE
 
+#### Code References
+ * NavMesh
+   * https://docs.unity3d.com/Manual/nav-BuildingNavMesh.html
+   * https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html
+ * SteamVR User Interface Interaction
+   * https://www.youtube.com/watch?v=3mRI1hu9Y3w
+   * https://www.youtube.com/watch?v=__iTtJHZg6k
+ * SteamVR Setup
+   * https://www.youtube.com/watch?v=5C6zr4Q5AlA
+   * https://valvesoftware.github.io/steamvr_unity_plugin/
+   * https://valvesoftware.github.io/steamvr_unity_plugin/articles/Quickstart.html
+
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
