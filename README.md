@@ -1,5 +1,11 @@
 <kbd>![The Hallowed VR - Banner](Screenshots/Hallowed_Banner_GitHub.png?)</kbd>
 
+## Project Supervisor
+Mr james Hayter
+
+## Project Vision
+For Game Developers and VR Players, who wish to be both inspired and immersed in a virtual world, to be able to have experiences they can’t achieve in real life, The Hallowed VR is a metroidvania virtual reality video game that will allow players to explore a large dungeon, discover new areas, acquire abilities, fight enemies using ranged combat, and solve puzzles to help escape The Hallowed.
+
 ## Description Of The Hallowed VR
 The Hallowed VR is a First-Person Metroidvania game built around Virtual Reality. You have awoken inside The Hallowed, a location only rumoured to exist. You must explore this mysterious place and find your escape. On your journey you will discover abilities to help traverse the map, such as a grapple hook to get to those hard to reach places. You are not alone in The Hallowed, strange creatures have inhabited the place and wish to remove you from it. Use ranged weaponry to gain an advantage and take them out. Solve puzzles to discover hidden rooms and items. Find the secrets of The Hallowed and escape...
 
